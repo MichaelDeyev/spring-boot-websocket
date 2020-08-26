@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversation History</title>
+</head>
+<body>
+
+<div>
+    <h1>History messages</h1>
+    <div th:each="el : ${messages}">
+        <h3 th:text="${el.getSender()}"/>
+        <p th:text="${el.getContent()}"/>
+    </div>
+</div>
+</body>
+</html>
